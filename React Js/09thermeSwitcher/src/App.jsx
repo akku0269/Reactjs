@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import ThemeBtn from "./components/ThemeBtn";
 import Card from "./components/Card";
 
+// remember to change config in tailwinf to darkmode
+
 function App() {
   const [themeMode, setThemeMode] = useState("light");
 
