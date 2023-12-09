@@ -11,6 +11,7 @@ import User from './components/User/User.jsx'
 import Github, { githubInfoLoader } from './components/Github/Github.jsx'
 
 
+
 const router = createBrowserRouter(    // iske niche jo commented code hai wo bhi same chiz krta hai syntax ba alag hai
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
