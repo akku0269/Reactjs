@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, {useId} from 'react'
 
 function InputBox({
@@ -12,7 +14,8 @@ function InputBox({
     className = "",
 }) {
 
-    const id = useId()
+  const id = useId()
+
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
         <div className='w-1-2'>
@@ -35,9 +38,9 @@ function InputBox({
         onChange={(e) => { onCurrencyChange && onCurrencyChange(e.target.value)}}
         disabled={currrencyDisabled}
         >
-            {currencyOptions.map((currency) => (
+        {currencyOptions.map((currency) => (
                 <option key={currency} value={currency}>{currency}</option>
-            ))}
+        ))}
         </select>
         </div>
     </div>
