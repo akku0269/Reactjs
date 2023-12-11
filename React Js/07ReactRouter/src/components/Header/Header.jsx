@@ -95,14 +95,11 @@ export default function Header(){
                                         hover:bg-gray-50 
                                         lg:hover:bg-transparent 
                                         lg:border-0 
-                                        hover:text-orange-700 lg:p-0`
-                                    }
+                                        hover:text-orange-700 lg:p-0`}
                                 >
                                     Github
                                 </NavLink>
                             </li>
-                            
-                            
                         </ul>
                     </div>
                 </div>
