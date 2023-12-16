@@ -5,7 +5,7 @@ import { TodoProvider } from "./contexts";
 import TodoForm from "./components/TodoForm";
 import TodoItem from "./components/TodoItem";
 
-function App() {
+function App(){
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
@@ -17,7 +17,7 @@ function App() {
 
   const updateTodo = (id, todo) => {
     setTodos((prev) =>
-      prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))                                                     // map is used for traversing
+      prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))                     //map is used for traversing
   }
 
   const deleteTodo = (id) => {
@@ -32,7 +32,6 @@ function App() {
 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
-
     if (todos && todos.length > 0) {
       setTodos(todos);
     }
