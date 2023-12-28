@@ -11,7 +11,7 @@ function App(){
   const addTodo = (todo) => {
     setTodos((prev) => [
       { id: Date.now(), ...todo },
-      ...prev
+      ...prev                         // purane todo's ko spread kr diye, ni to sab delete ho jata aue naya bs aata
     ])
   }
 
