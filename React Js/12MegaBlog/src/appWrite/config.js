@@ -1,7 +1,7 @@
 /* eslint-disable no-empty */
 /* eslint-disable no-useless-catch */
 /* eslint-disable no-unused-vars */
-import conf from '../conf/conf';
+import conf from '../conf/conf.js';
 import {Client, ID, Databases, Storage, Query} from "appwrite"
 
 export class Service{
@@ -50,7 +50,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            throw error
+            console.log("Appwrite serive :: updatePost :: error", error);
         }
     }
 
@@ -63,7 +63,7 @@ export class Service{
             )
             return true;
         } catch (error) {
-            console.log("Appwrite service :: getCurrentUser :: error", error);
+            console.log("Appwrite service :: deletePost :: error", error);
             return false
         }
     }

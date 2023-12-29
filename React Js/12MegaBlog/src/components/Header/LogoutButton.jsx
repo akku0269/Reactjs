@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import authService from '../../appWrite/config'
+import authService from '../../appWrite/auth'
 import {logout} from '../../store/authSlice'
 
 function LogoutButton() {
@@ -13,7 +13,9 @@ function LogoutButton() {
         })
     }
     return (
-        <button className='inline-bock px-6 py-2 duration-200 hover:bg-blue-300 rounded-full'>Logout</button>
+        <button className='inline-bock px-6 py-2 duration-200 hover:bg-blue-300 rounded-full'
+        onClick={logoutHandler}
+        >Logout</button>
     )
 }
 

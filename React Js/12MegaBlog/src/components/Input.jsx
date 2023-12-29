@@ -1,12 +1,6 @@
+/* eslint-disable react/prop-types */
 import React, {useId} from 'react'
-import { ReactPropTypes } from 'react'
-
-
-Input.propTypes = {
-    label: ReactPropTypes.string,
-    type: ReactPropTypes.string,
-    className: ReactPropTypes.string,
-  };
+;
 
 const Input = React.forwardRef( function Input({
     label,

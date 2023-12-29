@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react"
 import {useDispatch} from 'react-redux'
+import './App.css'
 import authService from './appWrite/auth'
 import {login, logout} from './store/authSlice'
 import { Footer } from "./components"
 import { Header } from "./components"
+import { Outlet } from 'react-router-dom'
 
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
       if(userData){
         dispatch(login({userData}))
       }else{
-        dispatch(logout(userData))
+        dispatch(logout())
       }
     })
     .finally(() => setLoading(false))
@@ -29,7 +31,7 @@ return !loading ? (
     <div className="w-full block">
       <Header/>
       <main>
-        {/*TODO: Outlet */}
+        TODO: <Outlet/>
       </main>
       <Footer/>
     </div>

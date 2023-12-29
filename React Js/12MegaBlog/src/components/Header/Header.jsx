@@ -1,14 +1,16 @@
 /* eslint-disable no-unused-vars */
 
 import React from 'react'
-import {Container, Logo, LogoutButton} from '../index'
+// import { Logo, LogoutButton} from '../index'
+import Logo from '../Logo'
+import LogoutButton from './LogoutButton'
+import Container from '../container/Container'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import authSlice from '../../store/authSlice'
 
 function Header() {
-    const authStatus = useSelector((state) => state.authStatus)
+    const authStatus = useSelector((state) => state.auth.status)
     const navigate = useNavigate()
 
     const navItems = [
